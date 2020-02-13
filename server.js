@@ -19,6 +19,12 @@ app.get('/users/:id',function(req,res){
 	})
 })
 
+app.get('/echo/:word',function(req,res){
+	res.json({
+		echo: req.params.word
+	})
+})
+
 
 app.post('/login',function(req,res){
  	const username=req.body.username;
